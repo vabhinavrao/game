@@ -1,5 +1,10 @@
 body{
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serifarial, sans-serif;margin: auto;display: flex;flex-direction: column;align-items: center;background-color: aquamarine;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serifarial, sans-serif;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(32, 200, 212);
 }
 h1{
     font-size: 3em;
@@ -44,4 +49,21 @@ h1{
 }.suiText{
     color: rgb(40, 122, 177);
 }
-
+.end{
+    margin-bottom: 40px;
+}
+.end button{
+    font-size: 4em;
+    color: white;
+    margin: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 50px;
+    background-color: rgb(33, 39, 33);
+    cursor: pointer;
+    transform: background-color 0.3s;
+}
+.end button:hover{
+    background-color: rgb(119, 138, 117)
+}
+/* Thank you Bro code for the helpful tutorial for js,html,css  ❤️*/
