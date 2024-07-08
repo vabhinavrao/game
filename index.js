@@ -7,6 +7,26 @@ const computerScoreDisplay = document.querySelector("#computerScoreDisplay");
 let playerScore=0;
 let computerScore=0;
 
+
+function resetGame(){
+    playerScore=0;
+    computerScore=0;
+    playerScoreDisplay.textContent = playerScore;
+    computerScoreDisplay.textContent = computerScore;
+    playerDisplay.textContent = "PLAYER : ";
+    computerDisplay.textContent = "COMPUTER : ";
+    resultDisplay.textContent = "Result";
+    resultDisplay.classList.remove("greenText", "redText", "suiText");
+}
+function shareScoreOnTwitter() {
+    const playerScore = document.getElementById("playerScoreDisplay").innerText;
+    const computerScore = document.getElementById("computerScoreDisplay").innerText;
+    const tweetText = "I scored " + playerScore + " points against the computer's " + computerScore + " points in the Rock-Paper-Scissors game! #GameScore";
+
+    const tweetUrl = "https://twitter.com/intent/tweet?text=" + encodeURIComponent(tweetText);
+
+    window.open(tweetUrl);
+}
 function playGame(PlayerChoice) {
     const computerChoice = choices[Math.floor(Math.random() * choices.length)];
     console.log(PlayerChoice, computerChoice);
@@ -53,9 +73,4 @@ function playGame(PlayerChoice) {
             computerScoreDisplay.textContent = computerScore;
             break;
     }
-
-
-
-
 }
-
